@@ -22,8 +22,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         GetPlayerInput();
-        Debug.Log(_horizontalInput);
-        Debug.Log(_verticalInput);
+
+       
+
         if (_verticalInput != 0 && _horizontalInput != 0)
         {
             transform.position += new Vector3(getHorizontalOffset(), getVerticalOffset(), 0) / Mathf.Sqrt(2);
