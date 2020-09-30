@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     {
         transform = GetComponent<Transform>();
         rigidbody2D = GetComponent<Rigidbody2D>();
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     void Update()
