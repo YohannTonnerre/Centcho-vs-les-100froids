@@ -172,7 +172,6 @@ MonoBehaviour:
   maxHealth: 40
   player: {fileID: 1502087770}
   moveSpeed: 10
-  animator: {fileID: 125057092}
 --- !u!212 &125057090
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -554,7 +553,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b7a25b6fe5478a94a81f1ed130b5e2bf, type: 3}
+  m_Sprite: {fileID: -306787472437928336, guid: 3305996c9518dc741a5516cc0b6c7ab0,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
