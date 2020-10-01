@@ -23,6 +23,11 @@ public abstract class Weapon : MonoBehaviour
 
         scopeInstance.transform.position = getMousePosition3D();
         HandleAiming();
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("SHOOT");
+            shoot();
+        }
     }
 
     public Vector3 getMousePosition3D()
@@ -49,6 +54,21 @@ public abstract class Weapon : MonoBehaviour
             aimLocalScale.y = +1f;
         }
         aimTransform.localScale = aimLocalScale;
+    }
+
+    public double getDistance(Vector2 gameObjectPosition)
+    {
+        return Vector2.Distance(gameObjectPosition, new Vector2(transform.position.x, transform.position.y));
+    }
+
+    public double getDamage()
+    {
+        return this.damage;
+    }
+
+    public double getReach()
+    {
+        return this.reach;
     }
 
     public abstract void shoot();

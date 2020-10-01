@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBehavior : MonoBehaviour
+public class EnemyBehavior : Entity
 {
 	public Transform player;
 	private Rigidbody2D rb;
@@ -11,13 +11,12 @@ public class EnemyBehavior : MonoBehaviour
 
 
 	public Animator animator;
-
-
-
 	Animation myAnimation;
     // Start is called before the first frame update
-    void Start()
+    
+    public void Start()
     {
+        base.Start();
         rb = this.GetComponent<Rigidbody2D>();
         myAnimation = GetComponent<Animation>();
     }
@@ -25,8 +24,6 @@ public class EnemyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
     	animator.SetFloat("Horizontal", movement.x);
     	animator.SetFloat("Vertical", movement.y);
     	animator.SetFloat("Magnitude", movement.magnitude);
@@ -34,16 +31,7 @@ public class EnemyBehavior : MonoBehaviour
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         direction.Normalize();
-        movement = direction;
-
-
-
-
-
-         
-       
- 
-         
+        movement = direction;         
     }
 
     private void FixedUpdate(){

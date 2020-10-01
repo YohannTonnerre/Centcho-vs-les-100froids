@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Entity
 {
     private float _horizontalInput = 0;
     private float _verticalInput = 0;
@@ -13,14 +13,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int speed = 5;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         transform = GetComponent<Transform>();
         rigidbody2D = GetComponent<Rigidbody2D>();
         rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    public void Update()
     {
         GetPlayerInput();
 
