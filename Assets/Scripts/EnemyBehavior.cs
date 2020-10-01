@@ -9,9 +9,6 @@ public class EnemyBehavior : Entity
 	public float moveSpeed = 5f;
 	private Vector2 movement;
 
-
-	public Animator animator;
-	Animation myAnimation;
     // Start is called before the first frame update
     
     public override void Start()

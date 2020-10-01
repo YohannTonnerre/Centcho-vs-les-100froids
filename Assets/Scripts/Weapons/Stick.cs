@@ -7,6 +7,7 @@ public class Stick : Weapon
     public override void shoot()
     {
         Debug.Log("shoot stick");
+        base.shootAnimation();
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
@@ -16,7 +17,7 @@ public class Stick : Weapon
         {
             if (hit.collider.tag == "Enemy")
             {
-                Debug.Log(getDistance(hit.collider.transform.position));
+                /*Debug.Log(getDistance(hit.collider.transform.position));*/
                 if (getDistance(hit.collider.transform.position) < getReach())
                 {
                     Entity entity = hit.collider.GetComponent<Entity>();
@@ -25,5 +26,7 @@ public class Stick : Weapon
             }
         }
     }
+
+
 
 }
