@@ -9,19 +9,27 @@ public abstract class Entity : MonoBehaviour
 
     private Animator animator;
 
-    public void Start()
+    public virtual void Start()
     {
         health = maxHealth;
         animator = GetComponent<Animator>();
     }
 
-    public void Update()
+    public virtual void Update()
     {
         Debug.Log(getHorizontal());
         Debug.Log(getVertical());
         animator.SetFloat("Horizontal", getHorizontal());
         animator.SetFloat("Vertical", getVertical());
         animator.SetFloat("Magnitude", getMagnitude());
+
+        Debug.Log(getZindex());
+        transform.position = new Vector3(transform.position.x, transform.position.y, getZindex());
+    }
+
+    private float getZindex()
+    {
+        return -1 * (1F / (1000F + transform.position.y));
     }
 
     public void Damage(double damage)
