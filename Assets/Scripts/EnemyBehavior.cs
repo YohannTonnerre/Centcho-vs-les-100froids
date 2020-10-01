@@ -18,15 +18,12 @@ public class EnemyBehavior : Entity
     {
         base.Start();
         rb = this.GetComponent<Rigidbody2D>();
-        myAnimation = GetComponent<Animation>();
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
-    	animator.SetFloat("Horizontal", movement.x);
-    	animator.SetFloat("Vertical", movement.y);
-    	animator.SetFloat("Magnitude", movement.magnitude);
+        base.Update();
         Vector3 direction = player.position - transform.position;
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -40,5 +37,20 @@ public class EnemyBehavior : Entity
 
     void moveCharacter(Vector2 direction){
     	rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+    }
+
+    public override float getHorizontal()
+    {
+        return movement.x;
+    }
+
+    public override float getVertical()
+    {
+        return movement.y;
+    }
+
+    public override float getMagnitude()
+    {
+        return movement.magnitude;
     }
 }

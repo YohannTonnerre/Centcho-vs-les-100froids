@@ -15,6 +15,7 @@ public class PlayerController : Entity
     // Start is called before the first frame update
     public void Start()
     {
+        base.Start();
         transform = GetComponent<Transform>();
         rigidbody2D = GetComponent<Rigidbody2D>();
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -22,10 +23,8 @@ public class PlayerController : Entity
 
     public void Update()
     {
+        base.Update();
         GetPlayerInput();
-
-       
-
         if (_verticalInput != 0 && _horizontalInput != 0)
         {
             transform.position += new Vector3(getHorizontalOffset(), getVerticalOffset(), 0) / Mathf.Sqrt(2);
@@ -52,5 +51,20 @@ public class PlayerController : Entity
         Vector3 mousePosition3d = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane));
         _mousePosition = new Vector3(mousePosition3d.x, mousePosition3d.y, 0);
 
+    }
+
+    public override float getHorizontal()
+    {
+        return _horizontalInput;
+    }
+
+    public override float getVertical()
+    {
+        return _verticalInput;
+    }
+
+    public override float getMagnitude()
+    {
+        return new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f).magnitude;
     }
 }
