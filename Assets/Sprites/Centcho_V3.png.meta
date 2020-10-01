@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: dd824f7d825eda4458683278a1f6fdef
+guid: e69ceaac085e1534e8a21d340351f2e4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7450900557843822528
-    second: Centcho_Sprite_0
+      213: -1031911681870578991
+    second: Centcho_V3_0
   - first:
-      213: 5300312972169605472
-    second: Centcho_Sprite_1
+      213: -7424241454953532799
+    second: Centcho_V3_1
   - first:
-      213: 4509716973778170324
-    second: Centcho_Sprite_2
+      213: 5279147466560505225
+    second: Centcho_V3_2
   - first:
-      213: 2709818080288185878
-    second: Centcho_Sprite_3
-  - first:
-      213: -3993518937641273865
-    second: Centcho_Sprite_4
-  - first:
-      213: 3737695270808730611
-    second: Centcho_Sprite_5
+      213: -3623021470802122742
+    second: Centcho_V3_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -65,7 +59,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -105,12 +99,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Centcho_Sprite_0
+      name: Centcho_V3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024.5
+        width: 1557.75
         height: 1560
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -119,19 +113,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c77a0fa49ae66760800000000000000
-      internalID: 7450900557843822528
+      spriteID: 1da378aeac9eda1f0800000000000000
+      internalID: -1031911681870578991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Centcho_Sprite_1
+      name: Centcho_V3_1
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 1557
         y: 0
-        width: 1024.5
+        width: 1557.75
         height: 1560
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -140,19 +134,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0617090e09e7e8940800000000000000
-      internalID: 5300312972169605472
+      spriteID: 182f3c66bbbc7f890800000000000000
+      internalID: -7424241454953532799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Centcho_Sprite_2
+      name: Centcho_V3_2
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 3114
         y: 0
-        width: 1024.5
+        width: 1557.75
         height: 1560
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -161,19 +155,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d1f893b1bbb59e30800000000000000
-      internalID: 4509716973778170324
+      spriteID: 9850e3596ac434940800000000000000
+      internalID: 5279147466560505225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Centcho_Sprite_3
+      name: Centcho_V3_3
       rect:
         serializedVersion: 2
-        x: 3072
+        x: 4671
         y: 0
-        width: 1024.5
+        width: 1557.75
         height: 1560
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -182,50 +176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61e1281df253b9520800000000000000
-      internalID: 2709818080288185878
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Centcho_Sprite_4
-      rect:
-        serializedVersion: 2
-        x: 4096
-        y: 0
-        width: 1024.5
-        height: 1560
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f5b81e4fab2498c0800000000000000
-      internalID: -3993518937641273865
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Centcho_Sprite_5
-      rect:
-        serializedVersion: 2
-        x: 5120
-        y: 0
-        width: 1024.5
-        height: 1560
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3fb363fab06fed330800000000000000
-      internalID: 3737695270808730611
+      spriteID: a08e93bfa2178bdc0800000000000000
+      internalID: -3623021470802122742
       vertices: []
       indices: 
       edges: []
