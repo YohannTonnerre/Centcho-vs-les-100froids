@@ -14,14 +14,14 @@ public class EnemyBehavior : Entity
 	Animation myAnimation;
     // Start is called before the first frame update
     
-    public void Start()
+    public override void Start()
     {
         base.Start();
         rb = this.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    public void Update()
+    public override void Update()
     {
         base.Update();
         Vector3 direction = player.position - transform.position;
