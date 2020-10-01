@@ -11,11 +11,13 @@ public abstract class Weapon : MonoBehaviour
     public Transform aimTransform;
     public GameObject scopePrefab;
     private GameObject scopeInstance;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         scopeInstance = Instantiate(scopePrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -72,4 +74,14 @@ public abstract class Weapon : MonoBehaviour
     }
 
     public abstract void shoot();
+
+
+    public void shootAnimation(){
+
+
+        animator.SetTrigger("Shoot");
+        Debug.Log(animator);
+            
+
+    }
 }

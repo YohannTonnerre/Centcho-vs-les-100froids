@@ -17,8 +17,8 @@ public abstract class Entity : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log(getHorizontal());
-        Debug.Log(getVertical());
+        /*Debug.Log(getHorizontal());
+        Debug.Log(getVertical());*/
         animator.SetFloat("Horizontal", getHorizontal());
         animator.SetFloat("Vertical", getVertical());
         animator.SetFloat("Magnitude", getMagnitude());
