@@ -5,13 +5,12 @@ using UnityEngine;
 public class EnemyBehavior : Entity
 {
     public HealthBar healthBar;
-    public float moveSpeed = 5f;
+    /*public float moveSpeed = 5f;*/
 
     public Pathfinding.AIDestinationSetter des;
 
 	private GameObject player;
-	/*public float moveSpeed = 5f;*/
-	private Vector2 movement;
+    private Vector2 movement;
     private Rigidbody2D rb;
     
     public override void Start()
@@ -20,7 +19,8 @@ public class EnemyBehavior : Entity
         rb = this.GetComponent<Rigidbody2D>();
         InitHealthBar();
         player = GameObject.Find("Player");
-        /*Debug.Log(des.target);*/
+        
+
         des.target = player.transform;
     }
 
@@ -29,7 +29,7 @@ public class EnemyBehavior : Entity
         base.Update();
         Vector3 direction = player.transform.position - transform.position;
 
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;    
         direction.Normalize();
         movement = direction;
 
