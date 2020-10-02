@@ -6,7 +6,7 @@ public class EnemyBehavior : Entity
 {
 	public Transform player;
 	private Rigidbody2D rb;
-	public float moveSpeed = 5f;
+	/*public float moveSpeed = 5f;*/
 	private Vector2 movement;
 
     // Start is called before the first frame update
@@ -33,7 +33,7 @@ public class EnemyBehavior : Entity
     }
 
     void moveCharacter(Vector2 direction){
-    	rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+    	/*rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));*/
     }
 
     public override float getHorizontal()

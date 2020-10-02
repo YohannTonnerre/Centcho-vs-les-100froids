@@ -11,6 +11,7 @@ public abstract class Weapon : MonoBehaviour
     public Transform aimTransform;
     public GameObject scopePrefab;
     private GameObject scopeInstance;
+    public AudioSource audioSource;
     Animator animator;
 
     // Start is called before the first frame update
@@ -77,11 +78,11 @@ public abstract class Weapon : MonoBehaviour
 
 
     public void shootAnimation(){
-
-
         animator.SetTrigger("Shoot");
         Debug.Log(animator);
-            
+    }
 
+    public void playAudio(){
+        audioSource.Play();
     }
 }
