@@ -27,10 +27,10 @@ public class PlayerController : Entity
         GetPlayerInput();
         if (_verticalInput != 0 && _horizontalInput != 0)
         {
-            transform.position += new Vector3(getHorizontalOffset(), getVerticalOffset(), 0) / Mathf.Sqrt(2);
+            rigidbody2D.MovePosition(rigidbody2D.position += new Vector2(getHorizontalOffset(), getVerticalOffset()) / Mathf.Sqrt(2));
         } else
         {
-            transform.position += new Vector3(getHorizontalOffset(), getVerticalOffset(), 0);
+            rigidbody2D.MovePosition(rigidbody2D.position += new Vector2(getHorizontalOffset(), getVerticalOffset()));
         }
     }
 
