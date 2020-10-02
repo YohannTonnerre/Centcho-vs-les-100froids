@@ -77,7 +77,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.197143, y: 5.482857}
+  m_Size: {x: 70.15, y: 27.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -101,6 +101,7 @@ MonoBehaviour:
   aimTransform: {fileID: 0}
   scopePrefab: {fileID: 8409824376486127179, guid: 161814eeda34bff4f8666064ca21ba29,
     type: 3}
+  audioSource: {fileID: 0}
   canon: {fileID: 2251510555763612036}
   bulletsPrefab: {fileID: 9140258972183683381, guid: 10cbc910ffe27ac4f8519ef1118bef58,
     type: 3}
