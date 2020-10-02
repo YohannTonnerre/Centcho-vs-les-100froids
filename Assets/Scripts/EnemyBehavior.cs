@@ -7,7 +7,7 @@ public class EnemyBehavior : Entity
     public HealthBar healthBar;
     /*public float moveSpeed = 5f;*/
 
-    public Pathfinding.AIDestinationSetter des;
+    /*public Pathfinding.AIDestinationSetter des;*/
 
 	private GameObject player;
     private Vector2 movement;
@@ -19,9 +19,9 @@ public class EnemyBehavior : Entity
         rb = this.GetComponent<Rigidbody2D>();
         InitHealthBar();
         player = GameObject.Find("Player");
-        
 
-        des.target = player.transform;
+
+        /*des.target = player.transform;*/
     }
 
     public override void Update()
