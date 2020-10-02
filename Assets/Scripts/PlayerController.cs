@@ -65,4 +65,9 @@ public class PlayerController : Entity
     {
         return new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f).magnitude;
     }
+
+    public override void onDied()
+    {
+        // Show game over menu
+    }
 }
