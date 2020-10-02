@@ -6,7 +6,6 @@ public class RandomSpawnEnemy : MonoBehaviour
 {
  	public Transform[] spawnPoints;
 	public GameObject[] enemyPrefabs;
-	public GameObject monObj;
 
 
 
