@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class EnemyBehavior : Entity
 {
-	public Transform player;
+
+    public Pathfinding.AIDestinationSetter des;
+	private GameObject player;
 	private Rigidbody2D rb;
 	/*public float moveSpeed = 5f;*/
 	private Vector2 movement;
@@ -15,13 +17,16 @@ public class EnemyBehavior : Entity
     {
         base.Start();
         rb = this.GetComponent<Rigidbody2D>();
+        player = GameObject.Find("Player");
+        /*Debug.Log(des.target);*/
+        des.target = player.transform;
     }
 
     // Update is called once per frame
     public void Update()
     {
         base.Update();
-        Vector3 direction = player.position - transform.position;
+        Vector3 direction = player.transform.position - transform.position;
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         direction.Normalize();
