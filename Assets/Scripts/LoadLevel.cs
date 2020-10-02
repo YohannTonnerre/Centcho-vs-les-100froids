@@ -7,9 +7,10 @@ public class LoadLevel : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public void btn_change_scene(string scene_name)
+    public void ChangeScene(string level)
     {
-        SceneManager.LoadScene("SampleScene");
+        Debug.Log(level);
+        SceneManager.LoadScene(level);
     }
 
 }
