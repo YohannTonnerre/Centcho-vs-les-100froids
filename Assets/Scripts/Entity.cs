@@ -22,8 +22,6 @@ public abstract class Entity : MonoBehaviour
         animator.SetFloat("Horizontal", getHorizontal());
         animator.SetFloat("Vertical", getVertical());
         animator.SetFloat("Magnitude", getMagnitude());
-
-        Debug.Log(getZindex());
         transform.position = new Vector3(transform.position.x, transform.position.y, getZindex());
     }
 
@@ -34,8 +32,22 @@ public abstract class Entity : MonoBehaviour
 
     public void Damage(double damage)
     {
-        Debug.Log("I have " + health + " <3");
         this.health = this.health - damage;
+        Debug.Log("I have " + health + " <3");
+        if (this.health <= 0)
+        {
+            onDied();
+        }
+    }
+
+    public double GetHealth()
+    {
+        return this.health;
+    }
+
+    public double GetMaxHealth()
+    {
+        return this.maxHealth;
     }
 
     public abstract float getHorizontal();
@@ -43,4 +55,6 @@ public abstract class Entity : MonoBehaviour
     public abstract float getVertical();
 
     public abstract float getMagnitude();
+
+    public abstract void onDied();
 }

@@ -4,25 +4,26 @@ using UnityEngine;
 
 public class EnemyBehavior : Entity
 {
+    public HealthBar healthBar;
+    public float moveSpeed = 5f;
 
     public Pathfinding.AIDestinationSetter des;
+
 	private GameObject player;
-	private Rigidbody2D rb;
 	/*public float moveSpeed = 5f;*/
 	private Vector2 movement;
-
-    // Start is called before the first frame update
+    private Rigidbody2D rb;
     
     public override void Start()
     {
         base.Start();
         rb = this.GetComponent<Rigidbody2D>();
+        InitHealthBar();
         player = GameObject.Find("Player");
         /*Debug.Log(des.target);*/
         des.target = player.transform;
     }
 
-    // Update is called once per frame
     public override void Update()
     {
         base.Update();
@@ -30,11 +31,18 @@ public class EnemyBehavior : Entity
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         direction.Normalize();
-        movement = direction;         
+        movement = direction;
+
+        healthBar.SetValue(GetHealth());
     }
 
     private void FixedUpdate(){
     	moveCharacter(movement);
+    }
+
+    public void InitHealthBar()
+    {
+        healthBar.SetMax(GetMaxHealth());
     }
 
     void moveCharacter(Vector2 direction){
@@ -54,5 +62,10 @@ public class EnemyBehavior : Entity
     public override float getMagnitude()
     {
         return movement.magnitude;
+    }
+
+    public override void onDied()
+    {
+        Destroy(gameObject);
     }
 }

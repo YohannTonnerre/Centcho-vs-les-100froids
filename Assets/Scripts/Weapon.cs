@@ -14,6 +14,8 @@ public abstract class Weapon : MonoBehaviour
     public AudioSource audioSource;
     Animator animator;
 
+    private double lastShoot = 0.0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,17 @@ public abstract class Weapon : MonoBehaviour
             Debug.Log("SHOOT");
             shoot();
         }
+    }
+
+    public bool tryShoot()
+    {
+        Debug.Log(Time.time - lastShoot);
+        if(Time.time - lastShoot > cooldown)
+        {
+            lastShoot = Time.time;
+            return true;
+        }
+        return false;
     }
 
     public Vector3 getMousePosition3D()
@@ -78,8 +91,12 @@ public abstract class Weapon : MonoBehaviour
 
 
     public void shootAnimation(){
-        animator.SetTrigger("Shoot");
-        Debug.Log(animator);
+
+        if (animator != null)
+        {
+            animator.SetTrigger("Shoot");
+            Debug.Log(animator);
+        }
     }
 
     public void playAudio(){
