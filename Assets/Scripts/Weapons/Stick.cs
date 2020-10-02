@@ -15,6 +15,7 @@ public class Stick : Weapon
         if (tryShoot())
         {
             base.shootAnimation();
+            base.playAudio();
             if (hit.collider != null)
             {
                 if (hit.collider.tag == "Enemy")
@@ -31,5 +32,7 @@ public class Stick : Weapon
                 }
             }
         }
+
+
     }
 }

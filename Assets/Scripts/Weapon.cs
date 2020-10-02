@@ -11,6 +11,7 @@ public abstract class Weapon : MonoBehaviour
     public Transform aimTransform;
     public GameObject scopePrefab;
     private GameObject scopeInstance;
+    public AudioSource audioSource;
     Animator animator;
 
     private double lastShoot = 0.0;
@@ -96,5 +97,9 @@ public abstract class Weapon : MonoBehaviour
             animator.SetTrigger("Shoot");
             Debug.Log(animator);
         }
+    }
+
+    public void playAudio(){
+        audioSource.Play();
     }
 }

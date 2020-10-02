@@ -5,23 +5,29 @@ using UnityEngine;
 public class EnemyBehavior : Entity
 {
     public HealthBar healthBar;
-	public Transform player;
     public float moveSpeed = 5f;
 
-    private Rigidbody2D rb;
+    public Pathfinding.AIDestinationSetter des;
+
+	private GameObject player;
+	/*public float moveSpeed = 5f;*/
 	private Vector2 movement;
+    private Rigidbody2D rb;
     
     public override void Start()
     {
         base.Start();
         rb = this.GetComponent<Rigidbody2D>();
         InitHealthBar();
+        player = GameObject.Find("Player");
+        /*Debug.Log(des.target);*/
+        des.target = player.transform;
     }
 
     public override void Update()
     {
         base.Update();
-        Vector3 direction = player.position - transform.position;
+        Vector3 direction = player.transform.position - transform.position;
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         direction.Normalize();
@@ -40,7 +46,7 @@ public class EnemyBehavior : Entity
     }
 
     void moveCharacter(Vector2 direction){
-    	rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
+    	/*rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));*/
     }
 
     public override float getHorizontal()
