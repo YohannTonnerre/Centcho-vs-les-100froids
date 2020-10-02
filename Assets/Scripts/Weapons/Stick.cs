@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class Stick : Weapon
 {
+
+
+
+
+
     public override void shoot()
     {
         Debug.Log("shoot stick");
         base.shootAnimation();
+        base.playAudio();
 
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
@@ -25,6 +31,8 @@ public class Stick : Weapon
                 }
             }
         }
+
+
     }
 
 
