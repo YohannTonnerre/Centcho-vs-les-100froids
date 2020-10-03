@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemyBehavior : Entity
 {
     public HealthBar healthBar;
     /*public float moveSpeed = 5f;*/
 
-    /*public Pathfinding.AIDestinationSetter des;*/
+/*    public Pathfinding.AIDestinationSetter des;*/
 
-	private GameObject player;
+    private GameObject player;
     private Vector2 movement;
     private Rigidbody2D rb;
     
@@ -21,7 +22,7 @@ public class EnemyBehavior : Entity
         player = GameObject.Find("Player");
 
 
-        /*des.target = player.transform;*/
+       /* des.target = player.transform;*/
     }
 
     public override void Update()
@@ -67,5 +68,7 @@ public class EnemyBehavior : Entity
     public override void onDied()
     {
         Destroy(gameObject);
+        CoinDeathCount.ScoreValue += 1;
+        Debug.Log(CoinDeathCount.ScoreValue);
     }
 }

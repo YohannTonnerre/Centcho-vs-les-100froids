@@ -12,20 +12,23 @@ public class RandomSpawnEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        InvokeRepeating("GenerateEnemy", 0, 5);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) 
-        {
 
-        	int RandomEnemy = Random.Range(0, enemyPrefabs.Length);
-        	int RandomSpawnPoint = Random.Range(0, spawnPoints.Length);
-        	transform.position = new Vector3(transform.position.x, transform.position.y, 0);
 
-        	Instantiate(enemyPrefabs[0], spawnPoints[RandomSpawnPoint].position, transform.rotation);
-        }
+       
+    }
+
+    void GenerateEnemy()
+    {
+        int RandomEnemy = Random.Range(0, enemyPrefabs.Length);
+        int RandomSpawnPoint = Random.Range(0, spawnPoints.Length);
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+
+        Instantiate(enemyPrefabs[0], spawnPoints[RandomSpawnPoint].position, transform.rotation);
     }
 }

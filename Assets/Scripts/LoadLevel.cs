@@ -7,9 +7,8 @@ public class LoadLevel : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public void ChangeScene(string level)
-    {
-        Debug.Log(level);
+    public void ChangeScene(string level) {  
+    
         SceneManager.LoadScene(level);
     }
 

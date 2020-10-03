@@ -30,14 +30,14 @@ public abstract class Weapon : MonoBehaviour
         HandleAiming();
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("SHOOT");
+            /*Debug.Log("SHOOT");*/
             shoot();
         }
     }
 
     public bool tryShoot()
     {
-        Debug.Log(Time.time - lastShoot);
+        /*Debug.Log(Time.time - lastShoot);*/
         if(Time.time - lastShoot > cooldown)
         {
             lastShoot = Time.time;
