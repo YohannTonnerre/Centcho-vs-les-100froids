@@ -12,7 +12,8 @@ public class RandomSpawnEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("GenerateEnemy", 0, 5);
+
+        InvokeRepeating("GenerateEnemy", 0, 10);/*Temps de spawn des michants*/
     }
 
     // Update is called once per frame
@@ -22,6 +23,8 @@ public class RandomSpawnEnemy : MonoBehaviour
 
        
     }
+
+
 
     void GenerateEnemy()
     {
