@@ -15,7 +15,7 @@ public class HealthBar : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("FLOAT: " + (value / max));
+        /*Debug.Log("FLOAT: " + (value / max));*/
         bar.transform.localScale = new Vector3((float)(value / max), 1, 1);
     }
 

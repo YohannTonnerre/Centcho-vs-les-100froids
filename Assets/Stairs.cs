@@ -20,7 +20,7 @@ public class Stairs : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log("Trigger");
+        /*Debug.Log("Trigger");*/
         GameObject obj = other.gameObject;
 
         if (gameObjectsLastPosition.ContainsKey(obj.name))
@@ -31,7 +31,7 @@ public class Stairs : MonoBehaviour
             {
                 float xDiff = lastPosition.x - obj.transform.position.x;
                 obj.transform.position += new Vector3(0, coef * xDiff, 0);
-                Debug.Log(lastPosition.x + " " +  obj.transform.position.x);
+                /*Debug.Log(lastPosition.x + " " +  obj.transform.position.x);*/
             }
         }
         gameObjectsLastPosition.Remove(obj.name);
