@@ -13,7 +13,7 @@ public class RandomSpawnEnemy : MonoBehaviour
     void Start()
     {
 
-        InvokeRepeating("GenerateEnemy", 0, 10);/*Temps de spawn des michants*/
+        InvokeRepeating("GenerateEnemy", 0, 1);/*Temps de spawn des michants*/
     }
 
     // Update is called once per frame

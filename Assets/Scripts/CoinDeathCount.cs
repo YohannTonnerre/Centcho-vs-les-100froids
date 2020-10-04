@@ -16,7 +16,15 @@ public class CoinDeathCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = ""+ ScoreValue;
+        if(ScoreValue >= 20)
+        {
+            score.text = "bien ouej";
+        }
+        else
+        {
+            score.text = "" + ScoreValue;
+
+        }
 
 
     }
